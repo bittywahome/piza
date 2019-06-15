@@ -12,5 +12,40 @@ pizza_Prices[bs-md]=700;
 pizza_Prices[bs-lg]=1000;
 pizza_Prices[bs-sm]=500;
 
-functio
+function getpizzaPrices()
+{
+    var pizzaPrice=0;
+    var theForm = document.forms[""];
+    var selectedPizza = theForm.elements[""];
+    for (var i=0; i<selectedPizza.clientHeight; i++);
+{
+    if(selectedpizza [i].checked)
+{
+pizzaPrice=pizza_Prices[selectedpizza[i].value];
+}
+}
+return pizzaPrice;
+}
 
+var topping_Prices= new Array();
+topping_prices['none']=0;
+topping_prices[mt-sm]=100;
+topping_prices[mt-md]=200;
+topping_prices[mt-ml]=250;
+topping_prices[mt-ps]=100;
+topping_prices[nt-pm]=250;
+topping_prices[mt-pl]=250;
+topping_prices[vg-os]=50;
+topping_prices[vg-om]=100;
+topping_prices[vg-ol]=150;
+
+function getttoppingPrice()
+{
+    var toppingPrice=0;
+    var theForm= document.forms[""]
+    var selectedtopping= theForm.elements[""];
+    pizzatoppingPrice= topping_Prices[selectedtopping.value]
+    return pizzatoppingPrice;
+}
+var pizzaPrice= getpizzaPrice()+ getttoppingPrice();
+document.getElementById().IinnerHTML= $ + pizzaPrice;
