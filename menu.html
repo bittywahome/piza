@@ -53,76 +53,67 @@
             </select> 
          </div>
         </div>
-
-      <div class="menu">
-      <h3>our menu</h3>
+<form action="" id="menu" onsubmit="return false;">
+<fieldset>
  <div class="col-md-4">
-   <ul>
-     <li>
-       <label>
-         <input type="checkbox" name="">
-         <span class="icon"></span>
-         <span class= "list">Bbq Beef & Pineapple
-            Barbeque beef pineapple, Bbq sauce </span>
-       </label>
-     </li>
-     <li>
-        <label>
-          <input type="checkbox" name="">
-          <span class="icon"></span>
-          <span class= "list">Veggie Tikka
-              Chillies,green peppers,onions,sweet corn,tikka sauce</span>
-        </label>
-      </li>
-      <li>
-          <label>
-            <input type="checkbox" name="">
-            <span class="icon"></span>
-            <span class= "list">Periperi Chicken Deluxe
-                Chicken,chllies,periperi sauce
-                
-                </span>
-          </label>
-        </li>
-        <li>
-            <label>
-              <input type="checkbox" name="">
-              <span class="icon"></span>
-              <span class= "list">Bbq Steak
-                  Beef topping, green pepper, Onions, bbq sauce</span>
-            </label>
-          </li>
-          <li>
-              <label>
-                <input type="checkbox" name="">
-                <span class="icon"></span>
-                <span class= "list">Feta and Veggie(V)
-                    Feta,green pepper,mushrooms,olives,onions</span>
-              </label>
-            </li>
-            <li>
-                <label>
-                  <input type="checkbox" name="">
-                  <span class="icon"></span>
-                  <span class= "list">Pepperoni Lovers
-                      Extra pepperoni
-                      
-                      </span>
-                </label>
-              </li>
-
-        <li>
-       <label>
-         <input type="checkbox" name="">
-         <span class="icon"></span>
-         <span class= "list">Chicken Tikka
-            Chicken, chillies,green pepper, tikka sauce</span>
-       </label>
-     </li>
-
-         </div>
-    </div>
-
-    </div>
+  <form action="" id="menu" onsubmit="return false;">
+    <fieldset>
+     <legend>our menu!</legend>
+     <label >small</label>
+     <input type="radio"  name="selectedpizza" value="small"
+     onclick="calculateTotal()" />
+     Bbq Beef & Pineapple
+            Barbeque beef pineapple, Bbq sauce  (600/=)
+     <input type="radio"  name="selectedpizza"value="medium"
+     onclick="calculateTotal()" />
+     Veggie Tikka
+              Chillies,green peppers,onions,sweet corn,tikka sauce(500/=)
+     <input type="radio"  name="selectedpizza" value="large"
+     onclick="calculateTotal()" />
+     Periperi Chicken Deluxe
+                Chicken,chllies,periperi sauce(1050/=)
+     <input type="radio"  name="selectedpizza" value="medium"
+     onclick="calculateTotal()" />
+     Bbq Steak
+                  Beef topping, green pepper, Onions, bbq sauce(700/=)
+  
+     </label>
+     <br>
+     <br>
+  
+     <select id="Toppings" name='Toppings'
+     onchange="calculateTotal()">
+     <option value="None">Select Toppings</option>
+     <option value="meat">macon-100/=(small)</option>
+     <option value="meat">macon-medium(200/=)</option>
+     <option value="meat">macon-large(250/=)<option>
+     <option value="meat">BBQsteak-small(100/=)</option>
+     <option value="meat">BBQsteak-medium(250/=)</option>
+     <option value="meat">BBQsteak-large(250/=)</option>
+     <option value="meat">spicy perperi-small(100/=)</option>
+     <option value="meat">spicy perperi-medium(250/=)</option>
+     <option value="meat">spicy perperi-large(250/=)</option>
+     <option value="veggies">Tomato-small(50/=)</option>
+     <option value="veggies">Tomato-medium(100/=)</option>
+     <option value="veggies">Tomato-large(150/=)</option>
+     <option value="veggies">onion-small(50/=)</option>
+     <option value="veggies">onion-medium(100/=)</option>
+     <option value="veggies">onion- large(150/=)</option>
+     <option value="veggies">pineapple-small(50/=)</option>
+     <option value="veggies">pineapple-medium(100/=)</option>
+     <option value="veggies">pineapple-large(150/=)</option>
+    
+    </select>
+     <br/>
+     <select id="crust" name='crust'
+     onchange="calculateTotal()">
+     <option value="None">crust</option>
+     <option value="crust">stuffed</option>
+     <option value="crust">crispy</option>
+     <option value="crust">Gluten-free</option>
+     
+     </fieldset>
+ </form>
+ 
       </body>
       </html>

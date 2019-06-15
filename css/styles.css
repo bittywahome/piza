@@ -65,15 +65,10 @@ h3{
   border: 0.5px solid ;
 }
 
-/*ul li input[type="checkbox"]
-{
-  display:none;*/
-}
-
 ul li span.list{
   position: relative;
   display: inline-block;
- /* overflow: hidden;*/  
+  overflow: hidden;  
   padding: o 5px;
   transition: o.5s;
 }
@@ -82,16 +77,3 @@ ul li input[type="checkbox"]:checked ~ span.list{
   color: #ccc;
 }
 
-ul li span.list:before{
-  content: '';
-  position: absolute;
-  top: 0;
-  left: -100%;
-  width:100%;
-  height:100%;
-  transition: 0.5s;
-  background: #ff3663;
-}
-
-ul li input[type="checkbox"]:checked ~ span.list:before{
-  

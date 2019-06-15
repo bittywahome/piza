@@ -1,49 +1,134 @@
 
-    <div class="container">
-            <div class="row">
-    <div class="col-md-4">
-            <img src="img/pic1.jpg" class="image-fluid ">
-            <p> Chicken Tikka
-              Marinated chicken, onions, greenpepper and cheese
-              KES 500.00</p>
-        </div>
-          <div class="col-md-4">
-            <img src="img/veg.png" class="image-fluid">
-            <p> Sweet Veggie
-              green pepper, tomatoes, sweet corn and cheese
-              KES 500.00</p>
-          </div>
-          <div class="col-md-4">
-            <img src="img/bacon2.jpeg" class="image-fluid">
-            <p>Chicken Macon BBQ
-              Marinated chicken, bacon, sweet corn onions and cheese
-              KES 550.00 </p>
-          </div>
-        </div>
+  <div class="container">
         <div class="row">
-              <div class="col-md-3">
-                <button type="order" class="btn btn-success">order</button> <br> <br>
-                <label for="fname"><i class="fa fa-user"></i>Full Name</label>
-                <input type="text" id="fname" name="firstname" placeholder=""><br>
-                <label for="size"><i class="fa fa-size"></i>Size</label><br>
-                <input type="text" id="size" name="size" placeholder="">
-                <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-                <input type="text" id="adr" name="address" placeholder="">
-                <label for="contact"><i class="fa fa-contact"></i> Contact</label>
-                <input type="text" id="contact" name="contact" placeholder=""><br> <br>
-                <button type="submit " class="btn btn-warning">Submit</button>
-                </div>
-                <div class="form-group">
-               <div class="col-md-3">
-                  <label> Toppings</label>
-                <select class="form-control" id="pizza-toppings">
-                  <option id="veggies">Extra Veg Toppings</option>
-                  <option id="veggies">Extra Meat Toppings</option>
-                </select> 
-             </div>
+<div class="col-md-4">
+        <img src="img/pic1.jpg" class="image-fluid ">
+        <p> Chicken Tikka
+          Marinated chicken, onions, greenpepper and cheese
+          KES 500.00</p>
+    </div>
+      <div class="col-md-4">
+        <img src="img/veg.png" class="image-fluid">
+        <p> Sweet Veggie
+          green pepper, tomatoes, sweet corn and cheese
+          KES 500.00</p>
+      </div>
+      <div class="col-md-4">
+        <img src="img/bacon2.jpeg" class="image-fluid">
+        <p>Chicken Macon BBQ
+          Marinated chicken, bacon, sweet corn onions and cheese
+          KES 550.00 </p>
+      </div>
+    </div>
+    <div class="row">
+          <div class="col-md-3">
+            <button type="order" class="btn btn-success">order</button> <br> <br>
+            <label for="fname"><i class="fa fa-user"></i>Full Name</label>
+            <input type="text" id="fname" name="firstname" placeholder=""><br>
+            <label for="size"><i class="fa fa-size"></i>Size</label><br>
+            <input type="text" id="size" name="size" placeholder="">
+            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+            <input type="text" id="adr" name="address" placeholder="">
+            <label for="contact"><i class="fa fa-contact"></i> Contact</label>
+            <input type="text" id="contact" name="contact" placeholder=""><br> <br>
+            <button type="submit " class="btn btn-warning">Submit</button>
+            </div>
+            <div class="form-group">
+           <div class="col-md-3">
+              <label> Toppings</label>
+            <select class="form-control" id="pizza-toppings">
+              <option id="veggies">Extra Veg Toppings</option>
+              <option id="veggies">Extra Meat Toppings</option>
+            </select> 
+         </div>
         </div>
-    
-        </div>
-          </body>
-          </html>
-    
+
+      <div class="menu">
+      <h3>our menu</h3>
+ <div class="col-md-4">
+   <ul>
+     <li>
+       <label>
+         <input type="checkbox" name="">
+         <span class="icon"></span>
+         <span class= "list">Bbq Beef & Pineapple
+            Barbeque beef pineapple, Bbq sauce </span>
+       </label>
+     </li>
+     <li>
+        <label>
+          <input type="checkbox" name="">
+          <span class="icon"></span>
+          <span class= "list">Veggie Tikka
+              Chillies,green peppers,onions,sweet corn,tikka sauce</span>
+        </label>
+      </li>
+      <li>
+          <label>
+            <input type="checkbox" name="">
+            <span class="icon"></span>
+            <span class= "list">Periperi Chicken Deluxe
+                Chicken,chllies,periperi sauce
+                
+                </span>
+          </label>
+        </li>
+        <li>
+            <label>
+              <input type="checkbox" name="">
+              <span class="icon"></span>
+              <span class= "list">Bbq Steak
+                  Beef topping, green pepper, Onions, bbq sauce</span>
+            </label>
+          </li>
+          <li>
+              <label>
+                <input type="checkbox" name="">
+                <span class="icon"></span>
+                <span class= "list">Feta and Veggie(V)
+                    Feta,green pepper,mushrooms,olives,onions</span>
+              </label>
+            </li>
+            <li>
+                <label>
+                  <input type="checkbox" name="">
+                  <span class="icon"></span>
+                  <span class= "list">Pepperoni Lovers
+                      Extra pepperoni
+                      
+                      </span>
+                </label>
+              </li>
+
+        <li>
+       <label>
+         <input type="checkbox" name="">
+         <span class="icon"></span>
+         <span class= "list">Chicken Tikka
+            Chicken, chillies,green pepper, tikka sauce</span>
+       </label>
+     </li>
+
+         </div>
+    </div>
+
+    </div>
+      </body>
+      </html>
+      <label for='include crust' class="inlinelabel">
+        Innclude crispy crust(0/=)</label>
+        <input type="checkbox" id="includecandles" name='includecandles'
+        onclick="calculateTotal()" />
+       </p>
+     
+        <p>
+        <label class="inlinelabel" for='includecrust'>
+        includ($20)</label>
+        <input type="checkbox" id="includeinscription"
+        name="includeinscription" onclick="calculateTotal()" />
+     
+        <input type="text"  id="theinscription"
+        name="theinscription" value="Enter Inscription"  />
+        </p>
+        <div id="totalPrice"></div>
+     
