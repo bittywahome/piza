@@ -1,5 +1,16 @@
+<!DOCTYPE html>
+<html>
 
-  <div class="container">
+<head>
+
+  <title>Jikonis pizza</title>
+  <link href="css/bootstrap.css" type="text/css" rel="stylesheet">
+  <link href="css/styles.css" type="text/css" rel="stylesheet">
+
+</head>
+<body>
+    
+    <div class="container">
         <div class="row">
 <div class="col-md-4">
         <img src="img/pic1.jpg" class="image-fluid ">
@@ -20,126 +31,173 @@
           KES 550.00 </p>
       </div>
     </div>
-    <div class="row">
-          <div class="col-md-3">
-            <button type="order" class="btn btn-success">order</button> <br> <br>
-            <label for="fname"><i class="fa fa-user"></i>Full Name</label>
-            <input type="text" id="fname" name="firstname" placeholder=""><br>
-            <label for="size"><i class="fa fa-size"></i>Size</label><br>
-            <input type="text" id="size" name="size" placeholder="">
-            <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-            <input type="text" id="adr" name="address" placeholder="">
-            <label for="contact"><i class="fa fa-contact"></i> Contact</label>
-            <input type="text" id="contact" name="contact" placeholder=""><br> <br>
-            <button type="submit " class="btn btn-warning">Submit</button>
-            </div>
-            <div class="form-group">
-           <div class="col-md-3">
-              <label> Toppings</label>
-            <select class="form-control" id="pizza-toppings">
-              <option id="veggies">Extra Veg Toppings</option>
-              <option id="veggies">Extra Meat Toppings</option>
-            </select> 
-         </div>
-        </div>
 
-      <div class="menu">
-      <h3>our menu</h3>
- <div class="col-md-4">
-   <ul>
-     <li>
-       <label>
-         <input type="checkbox" name="">
-         <span class="icon"></span>
-         <span class= "list">Bbq Beef & Pineapple
-            Barbeque beef pineapple, Bbq sauce </span>
+ 
+
+
+      $(document).ready(function() {
+        $("form#pizzaform").submit(function(event) {
+          event.preventDefault();
+        
+    
+         var pizza_Prices=new Array();
+            pizza_Prices["bp-sm"]=600;
+            pizza_Prices["bp-md"]=800;
+            pizza_Prices["bp-lg"]=1000;
+            pizza_Prices["vg-sm"]=500;
+            pizza_Prices["vg-md"]=700;
+            pizza_Prices["vg-lg"]=1050;
+            pizza_Prices["pc-lg"]=1200;
+            pizza_Prices["pc-md"]=1050;
+            pizza_Prices["pc-sm"]=800
+            pizza_Prices["bs-md"]=700;
+            pizza_Prices["bs-lg"]=1000;
+            pizza_Prices["bs-sm"]=500;
+            
+            function getpizzaPrices()
+            {
+                var pizzaPrice=0;
+                var theForm = document.forms["pizzaform"];
+                var selectedPizza = theForm.elements["t"];
+                for (var i=0; i<12; i++);
+            {
+                if(selectedpizza [i].checked)
+            {
+            pizzaPrice=pizza_Prices[selectedpizza[i].value];
+            }
+            }
+            return pizzaPrice;
+            }
+            var topping_Prices= new Array();
+            topping_prices['none']=0;
+            topping_prices["mt-sm"]=100;
+            topping_prices["mt-md"]=200;
+            topping_prices["mt-ml"]=250;
+            topping_prices["mt-ps"]=100;
+            topping_prices["nt-pm"]=250;
+            topping_prices["mt-pl"]=250;
+            topping_prices["vg-os"]=50;
+            topping_prices["vg-om"]=100;
+            topping_prices["vg-ol"]=150;
+            
+            function gettoppingPrice()
+            {
+                var toppingsPrice=0;
+                var theForm= document.forms["pizzaform"]
+                var selectedtopping= theForm.elements["topping"];
+                pizzatoppingPrice= topping_Prices[selectedtopping.value]
+                return toppingPrice;
+            }
+    
+            
+            function getTotal()
+            {
+            
+            var pizzaPrice= getpizzaPrice()+ gettoppingPrice();
+            document.getElementById('totalPrice').innerHTML= "Total price for pizza$" + pizzaPrice;
+            }
+        });      
+    });
+           
+            
+    <form action="" id="pizzaform" onsubmit="return false;">
+      <fieldset>
+       <legend>our menu!</legend>
+       <label >MENU</label> <br>
+       <input type="checkbox" class="option" name="selectedpizza" value="600"
+       onclick="calculateTotal()" />
+       Bbq Beef & Pineapple
+              Barbeque beef pineapple, Bbq sauce-small- (600/=) <br>
+        <input type="checkbox" class="option" name="selectedpizza"value="800"
+              onclick="calculateTotal()" />     
+              medium-(800/=)<br>
+              <input type="checkbox" class="option"  name="selectedpizza"value="1000"
+              onclick="calculateTotal()" />            
+              large-(1000/=)<br>
+       <input type="checkbox" class="option" name="selectedpizza"value="500"
+       onclick="calculateTotal()" />
+       Veggie Tikka
+                Chillies,green peppers,onions,sweet corn,tikka sauce-small-(500/=)<br>
+                <input type="checkbox" class=option  name="selectedpizza"value="700"
+                onclick="calculateTotal()" />     
+                medium-(700/=)<br>
+                <input type="checkbox" class="option" name="selectedpizza"value="1050"
+                onclick="calculateTotal()" />     
+                large-(1050/=)<br>
+       <input type="checkbox" class="option" name="selectedpizza" value="1200"
+       onclick="calculateTotal()" />
+       Periperi Chicken Deluxe
+                  Chicken,chllies,periperi sauce-large-(1200/=)<br>
+                  <input type="checkbox"  name="selectedpizza"value="1050"
+                  onclick="calculateTotal()" />        
+                  medium-(1050/=)<br>
+                  <input type="checkbox" class="option"  name="selectedpizza"value="800"
+                  onclick="calculateTotal()" />            
+                  small-(800/=)<br>
+       <input type="checkbox" class="option" name="selectedpizza" value="700"
+       onclick="calculateTotal()"/>
+       Bbq Steak
+                    Beef topping, green pepper, Onions, bbq sauce-medium-(700/=)<br>
+                    <input type="checkbox"  name="selectedpizza"value="1000"
+                    onclick="calculateTotal()" />     
+                    large-(1000/=)<br>
+                    <input type="checkbox" class="option" name="selectedpizza"value="500"
+                    onclick="calculateTotal()" /> 
+                    small-(500/=)<br>                
+    
        </label>
-     </li>
-     <li>
-        <label>
-          <input type="checkbox" name="">
-          <span class="icon"></span>
-          <span class= "list">Veggie Tikka
-              Chillies,green peppers,onions,sweet corn,tikka sauce</span>
-        </label>
-      </li>
-      <li>
-          <label>
-            <input type="checkbox" name="">
-            <span class="icon"></span>
-            <span class= "list">Periperi Chicken Deluxe
-                Chicken,chllies,periperi sauce
+       <br>
+       <br>
+  
+       <label >TOPPING</label><br>￼ 
+  
+       <select id="Topping" name="Topping"
+       onchange="calculateTotal()">
+       <option input type="checkbox" class="option" value="None">Select Topping</option>
+       <option input type="checkbox"class="option" value="100">macon-small(100)</option>
+       <option class="option" value="200">macon-medium(200/=)</option>
+       <option class="option" value="250">macon-large(250/=)<option>
+       <option class="option" value="100">perperi-small(100/=)</option>
+       <option class="option" value="250">perperi-medium(250/=)</option>
+       <option class="option" value="250">perperi-large(250/=)</option>
+       <option class="option" value="50">onion-small(50/=)</option>
+       <option class="option" value="100">onion-medium(100/=)</option>
+       <option class="option" value="150">onion- large(150/=)</option>
+      
+      </select>
+       <br/>
+       <br>
+       <select id="crust" name='crust'
+       onchange="calculateTotal()">
+       <option value="None">crust</option>
+       <option value="crust">stuffed</option>
+       <option value="crust">crispy</option>
+       <option value="crust">Gluten-free</option>
+       </select>
+       <br>
+       <br>
+       <div id="total">0</div>
+  
+  
+  
+   <legend>Contact Details</legend>
+                  <label for="name">Name</label>
+                  <input type="text" id="name" name="name">
+                  <br>
+                  <label for="address">Address</label>
+                  <input type="text" id="address" name="address">
+                  <br>
+                  <label for="phonenumber">Phone Number</label>
+                  <input type="text" id="phonenumber" name="phonenumber">
+                </fieldset>
+                  <br>
+                 
+                  <input type="button" id="submit" value="Submit" onclick="calculateTotal()">
+                </form>
+                </div>
+
+
+
+
+
                 
-                </span>
-          </label>
-        </li>
-        <li>
-            <label>
-              <input type="checkbox" name="">
-              <span class="icon"></span>
-              <span class= "list">Bbq Steak
-                  Beef topping, green pepper, Onions, bbq sauce</span>
-            </label>
-          </li>
-          <li>
-              <label>
-                <input type="checkbox" name="">
-                <span class="icon"></span>
-                <span class= "list">Feta and Veggie(V)
-                    Feta,green pepper,mushrooms,olives,onions</span>
-              </label>
-            </li>
-            <li>
-                <label>
-                  <input type="checkbox" name="">
-                  <span class="icon"></span>
-                  <span class= "list">Pepperoni Lovers
-                      Extra pepperoni
-                      
-                      </span>
-                </label>
-              </li>
-
-        <li>
-       <label>
-         <input type="checkbox" name="">
-         <span class="icon"></span>
-         <span class= "list">Chicken Tikka
-            Chicken, chillies,green pepper, tikka sauce</span>
-       </label>
-     </li>
-
-         </div>
-    </div>
-
-    </div>
-      </body>
-      </html>
-      <label for='include crust' class="inlinelabel">
-        Innclude crispy crust(0/=)</label>
-        <input type="checkbox" id="includecandles" name='includecandles'
-        onclick="calculateTotal()" />
-       </p>
-     
-        <p>
-        <label class="inlinelabel" for='includecrust'>
-        includ($20)</label>
-        <input type="checkbox" id="includeinscription"
-        name="includeinscription" onclick="calculateTotal()" />
-     
-        <input type="text"  id="theinscription"
-        name="theinscription" value="Enter Inscription"  />
-        </p>
-        <div id="totalPrice"></div>
-        <button type="order" class="btn btn-success">order</button> <br> <br>
-        <label for="fname"><i class="fa fa-user"></i>Full Name</label>
-        <input type="text" id="fname" name="firstname" placeholder=""><br>
-        <label for="size"><i class="fa fa-size"></i>Size</label><br>
-        <input type="text" id="size" name="size" placeholder="">
-        <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
-        <input type="text" id="adr" name="address" placeholder="">
-        <label for="contact"><i class="fa fa-contact"></i> Contact</label>
-        <input type="text" id="contact" name="contact" placeholder=""><br> <br>
-        <button type="submit " class="btn btn-warning">Submit</button>
-        </div>
-       

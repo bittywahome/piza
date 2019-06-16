@@ -31,95 +31,67 @@
           KES 550.00 </p>
       </div>
     </div>
-  <form action="" id="pizzaform" onsubmit="return false;">
-    <fieldset>
-     <legend>our menu!</legend>
-     <label >MENU</label> <br>
-     <input type="checkbox"  name="selectedpizza" value="bp-sm"
-     onclick="calculateTotal()" />
-     Bbq Beef & Pineapple
-            Barbeque beef pineapple, Bbq sauce-small- (600/=) <br>
-      <input type="checkbox"  name="selectedpizza"value="bp-md"
-            onclick="calculateTotal()" />     
-            medium-(800/=)<br>
-            <input type="checkbox"  name="selectedpizza"value="bp-lg"
-            onclick="calculateTotal()" />            
-            large-(1000/=)<br>
-     <input type="checkbox"  name="selectedpizza"value="vg-sm"
-     onclick="calculateTotal()" />
-     Veggie Tikka
-              Chillies,green peppers,onions,sweet corn,tikka sauce-small-(500/=)<br>
-              <input type="checkbox"  name="selectedpizza"value="vg-md"
-              onclick="calculateTotal()" />     
-              medium-(700/=)<br>
-              <input type="checkbox"  name="selectedpizza"value="vg-lg"
-              onclick="calculateTotal()" />     
-              large-(1050/=)<br>
-     <input type="checkbox"  name="selectedpizza" value="pc-lg"
-     onclick="calculateTotal()" />
-     Periperi Chicken Deluxe
-                Chicken,chllies,periperi sauce-large-(1200/=)<br>
-                <input type="checkbox"  name="selectedpizza"value="pc-md"
-                onclick="calculateTotal()" />        
-                medium-(1050/=)<br>
-                <input type="checkbox"  name="selectedpizza"value="pc-sm"
-                onclick="calculateTotal()" />            
-                small-(800/=)<br>
-     <input type="checkbox"  name="selectedpizza" value="bs-md"
-     onclick="calculateTotal()"/>
-     Bbq Steak
-                  Beef topping, green pepper, Onions, bbq sauce-medium-(700/=)<br>
-                  <input type="checkbox"  name="selectedpizza"value="bs-lg"
-                  onclick="calculateTotal()" />     
-                  large-(1000/=)<br>
-                  <input type="checkbox"  name="selectedpizza"value="bs-sml"
-                  onclick="calculateTotal()" /> 
-                  small-(500/=)<br>                
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-8">
+
+    <h3>our menu!</h3>
   
-     </label>
-     <br>
-     <br>
+    <label><input type="checkbox" class="option" value="600")/>Bbq Beef & Pineapple
+            Barbeque beef pineapple, Bbq sauce-small- (600/=)</label><br/>  
+            <label> <input type="checkbox" class="option" value="800" />medium-(800/=)</label><br/>
+            <input type="checkbox" class="option" value="1000"/>large-(1000/=)</label><br/>
+            <label><input type="checkbox" class="option" value="500"/>Veggie Tikka
+              Chillies,green peppers,onions,sweet corn,tikka sauce-small-(500/=)</label><br/>
+              <label></label><input type="checkbox" class=option value="700"/>medium-(700/=)</label><br/>
+              <label></label><input type="checkbox" class="option" value="1050" />large-(1050/=)</label><br/>
+              <label><input type="checkbox" class="option" value="1200"/>Periperi Chicken Deluxe
+      Chicken,chllies,periperi sauce-large-(1200/=)</label><br/>
+      <label><input type="checkbox" class="option" value="1050"/>medium-(1050/=)</label> <br/>
+        <label><input type="checkbox" class="option" value="800"/>small-(800/=)</label><br/>
+          <label><input type="checkbox" class="option" value="700"/>Bbq Steak
+     Beef topping, green pepper, Onions, bbq sauce-medium-(700/=)</label><br/>
+     <label><input type="checkbox" class="option" value="1000"/> large-(1000/=)</label><br/>
+      <label><input type="checkbox" class="option" value="500" />small-(500sh)</label><br/>
+      </div>
+                  <br>
+                  <br>
+                  <div class="col-md-4">
+                 <h4>TOPPINGS</h4>
 
-     <label >TOPPINGS</label><br>
-     <select id="Toppings" name="Toppings"
-     onchange="calculateTotal()">
-     <option value="None">Select Toppings</option>
-     <option value="mt-ms">macon-small(100)</option>
-     <option value="mt-md">macon-medium(200/=)</option>
-     <option value="mt-ml">macon-large(250/=)<option>
-     <option value="mt-ps">perperi-small(100/=)</option>
-     <option value="mt-pm">perperi-medium(250/=)</option>
-     <option value="mt-pl">perperi-large(250/=)</option>
-     <option value="vg-os">onion-small(50/=)</option>
-     <option value="vg-om">onion-medium(100/=)</option>
-     <option value="vg-ol">onion- large(150/=)</option>
-    
-    </select>
-     <br/>
-     <br>
-     <select id="crust" name='crust'
-     onchange="calculateTotal()">
-     <option value="None">crust</option>
-     <option value="crust">stuffed</option>
-     <option value="crust">crispy</option>
-     <option value="crust">Gluten-free</option>
-     </select>
+                  <label><input type="checkbox"class="option" value="100">macon-small(100/=)</label></br>
+                  <label><input type="checkbox" class="option" value="200">macon-medium(200/=)</label></br>
+                  <label><input type="checkbox" class="option" value="250">macon-large(250/=)</label></br>
+                  <label><input type="checkbox"class="option" value="100">perperi-small(100/=)</label></br>
+                  <label><input type="checkbox"class="option" value="250">perperi-medium(250/=)</label></br>
+                  <label><input type="checkbox" class="option" value="250">perperi-large(250/=)</label></br>
+                  <label><input type="checkbox" class="option" value="50">onion-small(50/=)</label></br>
+                  <label><input type="checkbox" class="option" value="100">onion-medium(100/=)</label></br>
+                  <label><input type="checkbox" class="option" value="150">onion- large(150/=)</label></br>
+                 
+                  </div>  
+    </div> 
+    </div>
+                  <div id="total">0</div>
+                  <script src="js/jquery-3.4.1.js"></script>
+                  <script src="js/bootstrap.min.js"></script>
+                  
+                  <script>
+                    $(document).ready(function() {
+                        $('label').click(function() {
+                            var total=0;
+                            $('.option:checked').each(function(){
+                                total += parseInt($(this).val()); 
+                        });
+                        $('#total').html(total + ("/="));
+                        })
+                    });
+                        
+                    </script>
+   
 
- <legend>Contact Details</legend>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name">
-                <br>
-                <label for="address">Address</label>
-                <input type="text" id="address" name="address">
-                <br>
-                <label for="phonenumber">Phone Number</label>
-                <input type="text" id="phonenumber" name="phonenumber">
-              </fieldset>
-                <br>
-                <input type="submit" id="submit" value="Submit" onclick="calculateTotal()">
-              </form>
-            
-                
- </div>
-      </body>
+             
+             </body>
+
       </html>

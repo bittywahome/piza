@@ -56,5 +56,7 @@ text-align: right;
 color:white;
 } 
 
-
+#submit{
+  display:hide;
+}
 
