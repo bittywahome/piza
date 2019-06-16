@@ -72,17 +72,50 @@
                  
                   </div>  
                   <div class="col-md-2">
-                      <select id="crust" name='crust'>
-                          <option value="None">crust</option>
-                          <option value="crust">stuffed</option>
-                          <option value="crust">crispy</option>
-                          <option value="crust">Gluten-free</option>
-                          </select>
+                  <h3>with crust</h3>
+                          <label><input type="checkbox" class="option" value="0"> no crust</label></br>
+                          <label><input type="checkbox" class="option" value="100">stuffed(100/=)</label></br>                          <option value="crust">crispy</option>
+                          <label><input type="checkbox" class="option" value="150">Gluten-free(150/=)</label></br>
+                          <label><input type="checkbox" class="option" value="100">crispy-(100/=)</label></br>
                   </div>
     </div> 
     </div>
                   <div id="total">0</div>
-                  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+
+
+                  <table class="pizza" style="width: 50%;" border="1" cellpadding="5">
+        <tbody>
+            <tr>
+                <td id="size"></td>
+                <td id="sizeprice"></td>
+            </tr>
+            <tr>
+                <td id="crust"></td>
+                <td id="crustprice"></td>
+            </tr>
+            <tr>
+                <td id="cheese"></td>
+                <td id="cheeseprice"></td>
+            </tr>
+            <tr>
+                <td id="sauce"></td>
+                <td id="sauceprice"></td>
+            </tr>
+            <tr>
+                <td id="meat"></td>
+                <td id="meatprice"></td>
+            </tr>
+            <tr>
+                <td id="veg"></td>
+                <td id="vegprice"></td>
+            </tr>
+            <tr>
+              <td><strong>TOTAL PRICE:</strong></td>
+                <td id="totalprice"></td>
+            </tr>
+        </tbody>
+    </table>
+    <br><script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
                   </script>
                   <script src="js/scripts.js"></script>    
 
