@@ -34,18 +34,18 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-6">
 
     <h3>our menu!</h3>
   
     <label><input type="checkbox" class="option" value="600")/>Bbq Beef & Pineapple
             Barbeque beef pineapple, Bbq sauce-small- (600/=)</label><br/>  
             <label> <input type="checkbox" class="option" value="800" />medium-(800/=)</label><br/>
-            <input type="checkbox" class="option" value="1000"/>large-(1000/=)</label><br/>
+            <label><input type="checkbox" class="option" value="1000"/>large-(1000/=)</label><br/>
             <label><input type="checkbox" class="option" value="500"/>Veggie Tikka
               Chillies,green peppers,onions,sweet corn,tikka sauce-small-(500/=)</label><br/>
-              <label></label><input type="checkbox" class=option value="700"/>medium-(700/=)</label><br/>
-              <label></label><input type="checkbox" class="option" value="1050" />large-(1050/=)</label><br/>
+              <label><input type="checkbox" class=option value="700"/>medium-(700/=)</label><br/>
+              <label><input type="checkbox" class="option" value="1050" />large-(1050/=)</label><br/>
               <label><input type="checkbox" class="option" value="1200"/>Periperi Chicken Deluxe
       Chicken,chllies,periperi sauce-large-(1200/=)</label><br/>
       <label><input type="checkbox" class="option" value="1050"/>medium-(1050/=)</label> <br/>
@@ -71,25 +71,20 @@
                   <label><input type="checkbox" class="option" value="150">onion- large(150/=)</label></br>
                  
                   </div>  
+                  <div class="col-md-2">
+                      <select id="crust" name='crust'>
+                          <option value="None">crust</option>
+                          <option value="crust">stuffed</option>
+                          <option value="crust">crispy</option>
+                          <option value="crust">Gluten-free</option>
+                          </select>
+                  </div>
     </div> 
     </div>
                   <div id="total">0</div>
-                  <script src="js/jquery-3.4.1.js"></script>
-                  <script src="js/bootstrap.min.js"></script>
-                  
-                  <script>
-                    $(document).ready(function() {
-                        $('label').click(function() {
-                            var total=0;
-                            $('.option:checked').each(function(){
-                                total += parseInt($(this).val()); 
-                        });
-                        $('#total').html(total + ("/="));
-                        })
-                    });
-                        
-                    </script>
-   
+                  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">
+                  </script>
+                  <script src="js/scripts.js"></script>    
 
              
              </body>
