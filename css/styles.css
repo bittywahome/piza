@@ -95,20 +95,9 @@ color:white;
 
 
 
-.form-popup{
-h
 
-
-
-}
 /* Set a style for the confirm button */
-.form-container .btn {
-  background-color: #4CAF50;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 50%;
-  margin-bottom:10px;
-  opacity: 0.8;
+
+#details{
+  background-color: burlywood;
 }

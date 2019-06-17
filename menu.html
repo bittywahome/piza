@@ -80,7 +80,7 @@
     </div> 
     </div>
                   
-    <button id="calc" type="submit" onclick="invoice()">Submit order</button><br>
+    <button id="calc" type="submit" onclick="invoice()">place order</button><br>
 
                   <table class="pizza" style="width: 50%;" border="1" cellpadding="5">
         <tbody>
@@ -101,11 +101,25 @@
                <td><strong>total:</strong></td>
                 <td id="total"></td>
             </tr>
+            <br>
+            <br>
               
+            <tr>
+              <td id="del"></td>
+              <td id="delprice"></td>
+            </tr>
         </tbody>
     </table>
 <br>
-<li><a href="contacts.html" button class="open-button" onclick="DELIVERY()">DELIVERY!!</button></a></li>
+
+<div id="deliverytable">
+  <h3 class="tablehead">Delivery?:</h3>
+
+      <a href="contacts.html" name="delivery" value="delivery">DELIVERY<input type="radio"></a>
+      <input type="radio" name="delivery" value="delivery">pick-up<br>
+
+  </div>
+
 </div>
    
     <br><script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous">

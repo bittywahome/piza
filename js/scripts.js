@@ -18,10 +18,6 @@ $(document).ready(function() {
     });
     
     
-    
-
-
-
 
 
 
@@ -44,12 +40,7 @@ $(".toppings").html(toppings.value+ "topping");
 $(toppings.value).html("+" +total +"/=");
 }
 
-(function DELIVERY() {
-    document.getElementById("myForm").style.display="block";
-})
-  ( function closeForm(){
-       document.getElementById("myForm").style.display="none";
-  })
+//
 
 
 
