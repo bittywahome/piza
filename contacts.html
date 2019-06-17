@@ -8,17 +8,34 @@
   <link href="css/styles.css" type="text/css" rel="stylesheet">
 </head>
   <body>
-  <form id="details">
-    <fieldset>
-      <legend>Personal information:</legend>
-      First name: <br>
-      <input type="text" id="first-name" placeholder="First name..."> <br>
-      Last name: <br>
-      <input type="text" last-name="" placeholder="Last name..."> <br>
-      Location: <br>
-      <input type="text" id="location" placeholder="county, city and street..."> <br> <br>
-      <button id="send" type="submit" onclick="">Submit</button>
-    </fieldset>
-  </form>
+    <form id="formInput">
+      <fieldset id="myPopup" >
+        <div class="col-sm-6 col-md-5">
+          <div class="contact">
+
+            <fieldset class="name-input">
+              <input style="color:black;" type="text" id="name" placeholder="Name" size="50">
+            </fieldset>
+
+            <fieldset class="email-input">
+              <input style="color:black;" type="email" id="email" placeholder="E-mail" size="50">
+              <span class="email-invalid" style="display:none">
+                Must be a valid email address</span>
+            </fieldset>
+
+            <fieldset class="message-input">
+              <textarea style="color:black;" id="message" name="message" rows="10" placeholder="Your message..."
+                cols="50"></textarea>
+            </fieldset>
+
+            <fieldset class="send-message">
+              <input style="color:black;" class="btn-primary btn-lg" type="submit" id="send" value="Submit Message"><br><br>
+            </fieldset>
+
+          </div>
+        </div>
+
+      </fieldset>
+    </form>
       </body>
       </html>

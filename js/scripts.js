@@ -42,6 +42,11 @@ $(toppings.value).html("+" +total +"/=");
 
 //
 
+$("#formInput").submit(function () {
+    event.preventDefault();
+    var name = $("#lname").val()
+    $(".result").append("Thank you " + name + " your order will be delivered in an hour.");
+  });
 
 
 
