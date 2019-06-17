@@ -1,6 +1,6 @@
 /* we are going to calculate every one of the inputs when we click one.
 when we click one,its gonna re-calculate all of them at once everytime something is changed.*/
-
+//business logic
 
 $(document).ready(function() {
     //when you click the label
@@ -40,15 +40,17 @@ $(".toppings").html(toppings.value+ "topping");
 $(toppings.value).html("+" +total +"/=");
 }
 
-//
+//user logic
 
-$("#formInput").submit(function () {
-    event.preventDefault();
-    var name = $("#name").val()
-    $(".result").append("Thank you " + name + " your order will be delivered in an hour.");
+$(document).ready(function () {
+    $("#delivery").click(function () {
+        prompt("Name")
+        prompt("Location")
+        prompt("Addrress")
+        alert("Your charges for delivery is ksh200")
+        alert("Your order will be delivered to your location")
+    });
   });
- <button type="submit" class="btn-primary btn-lg" id="send">Submit Message</button>
-
 
 
 
