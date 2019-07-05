@@ -1,13 +1,13 @@
 
-#Pizza delivery website
+# Pizza delivery website
 
 
-####By Betty Wahome
+#### By Betty Wahome
 
-####Description
+#### Description
 A pizza delivery website application that lets you as a user order pizza online. the user has a choice of making more than two orders,the crust they want and toppings of their preference.
 
-##Setup/Installation Requirements
+## Setup/Installation Requirements
 clone the project from Portfolio https://github.com/bittywahome/pizza.git
 change directory to portfolio in your local machine
 Cd to index.html
@@ -16,10 +16,10 @@ click styles.css to view styling and scripts.js to view the code.
 Technologies used
 {css,html, github, javascript}
 
-####Support
+#### Support
 {get intouch on email(bettywahome253@gmail.com)
 
-####License
+#### License
 copyright (c) {2019} betty wahome
 *MIT License
 
